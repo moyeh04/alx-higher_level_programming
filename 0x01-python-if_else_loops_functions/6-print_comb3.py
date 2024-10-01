@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(i, 10):
-        if i < j:
-            print("{:d}{:d}".format(i, j),
-                  end="\n" if i == 8 and j == 9 else ", ")
+for a in range(0, 9):
+    for b in range(a+1, 10):
+        between = ", "
+        if a == 8:
+            between = "\n"
+        print("{:d}{:d}".format(a, b), end=between)

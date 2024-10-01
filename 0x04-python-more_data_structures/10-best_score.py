@@ -1,11 +1,5 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary is None:
-        return None
-    maxval = 0
-    maxkey = None
-    for k, v in a_dictionary.items():
-        if v > maxval:
-            maxval = v
-            maxkey = k
-    return maxkey
+    if a_dictionary is not None and len(a_dictionary) != 0:
+        return list(dict(sorted(a_dictionary.items(),
+                                key=lambda x: (-x[1], x[0]))))[0]

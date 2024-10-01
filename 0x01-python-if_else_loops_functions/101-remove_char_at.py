@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-    newstr = ""
-    for i, c in enumerate(str):
-        if i != n:
-            newstr += c
-    return newstr
+    newstring = ""
+    for i in range(0, len(str)):
+        if i == n:
+            continue
+        newstring += str[i]
+    return newstring
