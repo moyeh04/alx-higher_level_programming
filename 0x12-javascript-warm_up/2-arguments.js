@@ -1,8 +1,10 @@
 #!/usr/bin/node
-if (process.argv[3] !== undefined) {
-  console.log('Arguments found');
-} else if (process.argv[2] !== undefined) {
+const argc = process.argv.length - 2; // subtract (node binary + script path) = user args only
+
+if (argc === 0) {
+  console.log('No argument');
+} else if (argc === 1) {
   console.log('Argument found');
 } else {
-  console.log('No argument');
+  console.log('Arguments found');
 }
